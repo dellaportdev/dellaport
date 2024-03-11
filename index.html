@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dellaport.dev</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,55 +18,135 @@
             align-items:center;
             justify-content: center;
             height:100vh;
+            width:100%;
+            min-width:320px;
             margin:0;
-            color:#333;
-            
+            font-size: 20px;
+
+            background:#333;
+            color:#eee;
         }
 
-        div {
-            font-size: 60px;
-            background: #fff;
-            box-shadow: 0 0 30px #EEE;
+        a {
+            text-decoration: none;
+            color:#eee;
+        }
+        a:hover {
+            color:blue;
+        }
+
+        body > div {
+            box-shadow: 0 0 30px #1112;
             padding: 40px 30px;
-            border-radius: 4px;
+            border-radius: 1em;
+            max-width: 100%;
         }
 
         h1, h2, h3, h4 {
             margin:0;
-            line-height:1.2em;
+            line-height:1.3em;
             font-weight: normal;
+            transition: opacity .3s ease-in-out, transform .7s ease-out;
+            text-shadow:1px 1px 0px #000;
         }
         
         h1 {
-            font-size:60px;
+            font-size:4em;
             font-weight: bold;
+            animation: fadeInSlide 1s forwards; 
+            text-shadow:none;
+            position:relative;
+            filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.5));
         }
-        
+
+    
         h2 {
-            font-size:19px;
+            font-size:1.25;
             text-transform: uppercase;
             letter-spacing:2px;
+            animation: fadeInSlide 1.25s forwards;
         }
 
         h3 {
-            font-size:15px;
+            font-size:1em;
+            animation: fadeInSlide 1.5s forwards;
         }
 
         h4 {
-            font-size: 15px;
+            font-size:1em;
             letter-spacing: 2px;
             margin-top: 12px;
             font-weight: bold;
+            animation: fadeInSlide 2s forwards;
         }
+
+        @media (max-width: 600px) {
+            body {
+                display:block;
+            }
+
+            body > div {
+                padding:0px;
+                width:100%;
+                max-width:95%;
+                margin:0 auto;
+            }
+            
+        }
+
+        @keyframes fadeInSlide {
+            from {
+                opacity: 0;
+                transform: translateX(20%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0); 
+            }
+        }
+
+
+        @supports (background-clip: text) {
+            .gradient-text {
+                background: -webkit-linear-gradient(290deg, #fff, #333);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                max-width: 100%;
+            }
+
+            .gradient-text h1 {
+                position: relative;
+            }
+
+            .gradient-text h1::before {
+                content: attr(aria-label);
+                position: absolute;
+                left: 2px; 
+                top: 2px;
+                color: #111;
+            }             
+           h1 {
+                background: -webkit-linear-gradient(290deg, #fff, #333);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
     </style>
 </head>
 
 <body>
     <div>
-        <h1>Dellaport.dev</h1>
+        <div class="gradient-text">
+            <h1>Dellaport.dev</h1>
+        </div>
+
         <h2>Design &amp; Development</h2>
         <h3>Web Development, Internet Software, Digital & Print Media</h3>
-        <h4><span class="num">760 301 6219</span> <br> info@dellaport.dev</h4>
+        <h4>
+            <!-- <span class="num">760 301 6219</span> <br>  -->
+            <a href="mailto:info@dellaport.dev">info@dellaport.dev</a>
+        </h4>
     </div>
 </body>
 
