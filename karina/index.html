@@ -14,7 +14,7 @@
     <style>
         html,
         body {
-            font-family: 'Lato', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', sans-serif;
+            font-family: 'Lato', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
         }
 
         @media print {
@@ -24,11 +24,16 @@
 
             body {
                 margin: 0;
+                color: #000;
             }
 
             a {
+                color: #000;
                 text-decoration: none;
-                color: black;
+            }
+
+            .no-print-break {
+                break-inside: avoid;
             }
         }
     </style>
@@ -41,12 +46,11 @@
             <p class="mt-1 text-sm uppercase tracking-widest">Graphic Designer</p>
 
             <div class="mt-3 text-sm">
-                <div class="flex flex-col space-y-1 sm:hidden">
+                <div class="flex flex-col items-center space-y-1 sm:hidden">
                     <a href="tel:19095346177" class="underline">909-534-6177</a>
                     <a href="mailto:karina@dellaport.dev" class="underline">karina@dellaport.dev</a>
                     <a href="https://dellaport.dev/karina" class="underline">dellaport.dev/karina</a>
                 </div>
-
                 <div class="hidden sm:flex sm:justify-center sm:space-x-3">
                     <a href="tel:19095346177" class="underline">909-534-6177</a>
                     <span>•</span>
@@ -57,11 +61,9 @@
             </div>
         </header>
 
-
-
         <hr class="my-6 border-gray-300" />
 
-        <section aria-labelledby="summary">
+        <section aria-labelledby="summary" class="no-print-break">
             <h2 id="summary" class="text-xs font-bold uppercase tracking-widest">Professional Summary</h2>
             <p class="mt-2 text-sm leading-relaxed">
                 Seasoned Graphic Designer and Production Lead with over 20 years of experience in print media, layout
@@ -75,7 +77,7 @@
 
         <hr class="my-6 border-gray-300" />
 
-        <section aria-labelledby="skills">
+        <section aria-labelledby="skills" class="no-print-break">
             <h2 id="skills" class="text-xs font-bold uppercase tracking-widest">Skills</h2>
 
             <div class="mt-3 grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -85,38 +87,38 @@
                         <li>Adobe InDesign (advanced)</li>
                         <li>Adobe Photoshop (proficient)</li>
                         <li>Adobe Illustrator (intermediate)</li>
-                        <li>Page Layout & Composition</li>
-                        <li>Typographic Hierarchy & Style Emulation</li>
-                        <li>Print Production & Prepress</li>
+                        <li>Page Layout &amp; Composition</li>
+                        <li>Typographic Hierarchy &amp; Style Emulation</li>
+                        <li>Print Production &amp; Prepress</li>
                         <li>Color Theory</li>
-                        <li>WordPress & Wix Website Management</li>
-                        <li>Basic HTML & CSS</li>
+                        <li>WordPress &amp; Wix Website Management</li>
+                        <li>Basic HTML &amp; CSS</li>
                     </ul>
                 </div>
 
                 <div>
-                    <h3 class="text-sm font-semibold uppercase tracking-wide">Soft Skills & Collaboration</h3>
+                    <h3 class="text-sm font-semibold uppercase tracking-wide">Soft Skills &amp; Collaboration</h3>
                     <ul class="mt-2 space-y-1 text-sm leading-relaxed list-disc pl-5">
-                        <li>Style Matching & Brand Consistency</li>
-                        <li>Editorial Support: Copy Editing & Proofreading</li>
+                        <li>Style Matching &amp; Brand Consistency</li>
+                        <li>Editorial Support: Copy Editing &amp; Proofreading</li>
                         <li>Content Organization</li>
                         <li>Cross-Team Collaboration</li>
                         <li>Deadline Management in Fast-Paced Environments</li>
-                        <li>Strong Web Literacy & Resourceful Problem-Solving</li>
+                        <li>Strong Web Literacy &amp; Resourceful Problem-Solving</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <hr class="my-6 border-gray-300" />
-
-        <section aria-labelledby="experience">
+        
+        <section aria-labelledby="experience" class="no-print-break">
             <h2 id="experience" class="text-xs font-bold uppercase tracking-widest">Professional Experience</h2>
-
+        
             <article class="mt-3">
                 <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
                     <h3 class="font-bold">Graphic Designer / Production Lead</h3>
-                    <p class="text-sm sm:text-right">Village News, Inc. | Oct. 2004–Present</p>
+                    <p class="text-sm sm:text-right">Village News, Inc. | 2004–Present</p>
                 </div>
                 <ul class="mt-2 space-y-1 text-sm leading-relaxed list-disc pl-5">
                     <li>Lead end-to-end production of weekly <span class="italic">Valley News</span> and <span
@@ -141,12 +143,12 @@
 
         <hr class="my-6 border-gray-300" />
 
-        <section aria-labelledby="freelance">
+        <section aria-labelledby="freelance" class="no-print-break">
             <h2 id="freelance" class="text-xs font-bold uppercase tracking-widest">Freelance Experience</h2>
 
             <article class="mt-3">
                 <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
-                    <h3 class="font-bold">Web & Content Designer</h3>
+                    <h3 class="font-bold">Web &amp; Content Designer</h3>
                     <p class="text-sm sm:text-right">Birthline of San Diego | <a class="underline"
                             href="https://birthlineofsandiego.org">birthlineofsandiego.org</a> | 2024–Present</p>
                 </div>
@@ -204,7 +206,7 @@
 
         <hr class="my-6 border-gray-300" />
 
-        <section aria-labelledby="education">
+        <section aria-labelledby="education" class="no-print-break">
             <h2 id="education" class="text-xs font-bold uppercase tracking-widest">Education</h2>
 
             <article class="mt-3">
@@ -214,20 +216,43 @@
             </article>
 
             <article class="mt-4">
-                <h3 class="font-bold">Web Design Essentials Certificate Coursework</h3>
+                <h3 class="font-bold">Web Design Essentials Coursework</h3>
                 <p class="text-sm">Santa Monica College</p>
                 <p class="text-sm">2016–2018</p>
             </article>
         </section>
 
+        <hr class="my-6 border-gray-300" />
+
+        <section aria-labelledby="awards" class="no-print-break">
+            <h2 id="awards" class="text-xs font-bold uppercase tracking-widest">Awards</h2>
+
+            <article class="mt-3">
+                <h3 class="font-bold">2011 Society of Professional Journalists Award, San Diego Pro Chapter</h3>
+                <ul class="mt-2 space-y-1 text-sm leading-relaxed list-disc pl-5">
+                    <li>First Place – Magazines: Layout &amp; Design – Story or Series – “1600 Degrees of Perfection at
+                        the Oak Room” – <span class="italic">Village Lifestyle Magazine</span></li>
+                    <li>Second Place – Magazines: Layout &amp; Design – “Bugs in your Plants?” – <span
+                            class="italic">Village Lifestyle Magazine</span></li>
+                </ul>
+            </article>
+
+            <article class="mt-4">
+                <h3 class="font-bold">2005 Society of Professional Journalists Award, San Diego Pro Chapter</h3>
+                <ul class="mt-2 space-y-1 text-sm leading-relaxed list-disc pl-5">
+                    <li>Third Place – Features Category – “Fallbrook Garden Club: 75 Years Strong” written by Sarah
+                        Bates, graphic design by Karina Young</li>
+                </ul>
+            </article>
+        </section>
+
         <footer class="mt-8 border-t border-gray-300 pt-4">
-            <div class="mt-3 text-sm">
-                <div class="flex flex-col space-y-1 sm:hidden">
+            <div class="flex flex-col items-center space-y-1 text-sm">
+                <div class="flex flex-col items-center space-y-1 sm:hidden">
                     <a href="tel:19095346177" class="underline">909-534-6177</a>
                     <a href="mailto:karina@dellaport.dev" class="underline">karina@dellaport.dev</a>
                     <a href="https://dellaport.dev/karina" class="underline">dellaport.dev/karina</a>
                 </div>
-            
                 <div class="hidden sm:flex sm:justify-center sm:space-x-3">
                     <a href="tel:19095346177" class="underline">909-534-6177</a>
                     <span>•</span>
