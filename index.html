@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dellaport.dev | Web Design &amp; Development for Small Businesses</title>
-
     <meta name="description"
         content="dellaport.dev delivers professional web design, custom software development, print & digital media, and branding solutions—on-site in Southern California or remotely nationwide.">
     <meta name="keywords"
@@ -16,468 +14,370 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Mono:wght@400;500&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <style>
-        body {
-            font-family: "DM Sans", sans-serif;
-            font-optical-sizing: auto;
-            font-style: normal;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .box h1,
-        .box h2,
-        .box h3,
-        .box h4 {
-            margin: 0;
-            line-height: 1.3em;
-            text-shadow: 2px 2px 0px #000;
-        }
-
-        .box {
-            box-shadow: 0 0 30px #1112;
-            padding: 20px 30px 40px;
-            border-radius: 1em;
-            background: #333;
-            color: #eee;
-            position: relative;
-            margin: 0;
-            max-width: 100%;
-        }
-
-        .box::before,
-        .box::after {
-            content: '';
-            z-index: -1;
-            position: absolute;
-            width: calc(100% + 10px);
-            height: calc(100% + 10px);
-            top: -5px;
-            left: -5px;
-            border-radius: inherit;
-            background: radial-gradient(circle,
-                    #ffff00, #ffaa00, #ff6600, #ff0000,
-                    #ff0055, #ff0088, #ff00aa, #ff00ff,
-                    #cc00ff, #aa00ff, #6600ff, #001aff,
-                    #0066ff, #0099ff, #00ff00, #00ffff,
-                    #00ffcc, #00ff99, #00ff55, #00ff00, #aaff00, #ffff00);
-            background-size: 300%;
-            animation: border 22s linear infinite;
-        }
-
-        .box::after {
-            filter: blur(50px);
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            bottom: -3px;
-            width: 0;
-            height: 2px;
-            background: #fff;
-            /* indigo-500 */
-            transition: width .3s ease, left .3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-            left: 0;
-        }
-
-        @keyframes border {
-
-            0%,
-            100% {
-                background-position: 0 0;
-            }
-
-            50% {
-                background-position: 300%;
-            }
-        }
-
-        #logo-text {
-            letter-spacing:2px;
-        }
-
-        #logo {
-            --slide-distance: 0px;
-        }
-
-        #arrow-left, #arrow-right {
-            transform: translateX(-50%);
-        }
-
-        #logo.loaded #arrow-left {
-            transform: translateX(calc(-50% - var(--slide-distance)));
-        }
-
-        #logo.loaded #arrow-right {
-            transform: translateX(calc(-50% + var(--slide-distance)));
-        }
-
-    </style>
+    <link href="./style.css" rel="stylesheet" />
 </head>
 
-<body class="antialiased bg-white text-gray-900">
-    <nav class="fixed top-0 inset-x-0 z-50 backdrop-filter backdrop-blur-md bg-blue-400 bg-opacity-60 border-b border-gray-200 border-opacity-70 shadow-lg">
-        <div class="max-w-5xl mx-auto flex items-center justify-center gap-8 px-6 py-3 text-sm font-medium">
-            <a href="#home" class="relative text-white hover:text-white nav-link">Home</a>
-            <a href="#services" class="relative text-white hover:text-white nav-link">Services</a>
-            <a href="#clients" class="relative text-white hover:text-white nav-link">Clients</a>
-            <a href="#contact" class="relative text-white hover:text-white nav-link">Contact</a>
+<body class="antialiased bg-gray-900 text-gray-100">
+
+    <nav class="fixed top-0 inset-x-0 z-50 bg-gray-900 bg-opacity-90 border-b border-gray-800 backdrop-blur" role="navigation" aria-label="Main navigation">
+        <div class="max-w-5xl mx-auto flex items-center justify-between px-6 py-4">
+            <a href="#home" class="text-sm text-gray-400 hover:text-white transition-colors" style="font-family:'DM Mono',monospace;" aria-label="dellaport.dev home">
+                <span class="text-yellow-400">&lt;</span>dellaport.dev <span class="text-yellow-400">/&gt;</span>
+            </a>
+            <div class="flex items-center gap-6 text-sm font-medium">
+                <a href="#services" class="nav-link text-gray-400 hover:text-white transition-colors">Services</a>
+                <a href="#clients" class="nav-link text-gray-400 hover:text-white transition-colors">Clients</a>
+                <a href="#contact" class="text-gray-300 border border-gray-700 hover:border-indigo-500 hover:text-white px-4 py-1 rounded transition-all">Contact</a>
+            </div>
         </div>
     </nav>
+
     <div id="sections" class="overflow-x-hidden">
 
-        <section id="home" class="min-h-screen flex items-center justify-center bg-gray-900 px-5" data-section>
-            <div class="opacity-0 transform translate-y-8 transition-all duration-700">
-                <div class="box text-center px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
-                    <h1 id="logo" class="relative inline-block whitespace-nowrap text-3xl sm:text-4xl md:text-6xl font-bold mb-2 leading-tight">
-                        <span id="arrow-left" class="absolute left-1/2 top-0 text-blue-400 px-2 transition-transform duration-1000 ease-out">&lt;</span>
-                        <span id="logo-text" class="inline-block opacity-0 mx-2 transition-opacity duration-1000 delay-700 ease-out">de<span class="italic text-blue-400">ll</span>aport<span class="text-blue-400">.</span>dev</span>
-                        <span id="arrow-right" class="absolute left-1/2 top-0 text-blue-400 px-2 transition-transform duration-1000 ease-out">&gt;</span>
-                    </h1>
-
-                    <p class="text-xl sm:text-2xl mb-4 uppercase tracking-wide">
-                        Design &amp; Development
-                    </p>
-                    <p class="text-base sm:text-md mb-4 leading-relaxed">
-                        Web Development, Custom Software, <br class="hidden sm:block" />Print and Digital Media.
-                        <br class="" />
-                        Solutions for small to medium businesses.
-                    </p>
-                    <a href="#contact" class="relative text-blue-400">Contact</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="services" class="min-h-screen flex items-center justify-center relative bg-gradient-to-b from-gray-900 to-gray-800 py-16 overflow-x-hidden" data-section>
-            <div class="relative max-w-6xl mx-auto px-6 opacity-0 transform translate-y-8 transition-all duration-700">
-                <div class="reveal text-center mb-8">
-                    <h2 class="text-4xl font-semibold text-white inline-block relative">
-                        Services
-                        <span class="block w-20 h-1 bg-blue-400 rounded mt-2 mx-auto"></span>
-                    </h2>
-                    <p class="text-lg leading-relaxed max-w-2xl mx-auto text-gray-300 mt-4">
-                        Custom software and design for small businesses.
-                    </p>
-                </div>
-
-
-                <div class="reveal grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                    <div class="space-y-4 bg-gray-800 rounded-xl p-6 ring-1 ring-gray-700 hover:shadow-lg transition bg-opacity-60">
-                        <h3 class="text-xl font-semibold text-blue-400">Custom Development</h3>
-                        <ul class="space-y-2 text-sm text-gray-200">
-                            <li>Tailored web applications</li>
-                            <li>Custom and purpose-built Interfaces</li>
-                            <li>Database design &amp; management</li>
-                            <li>Database migration &amp; conversions</li>
-                            <li>Responsive &amp; mobile tuning</li>
-                            <li>Performance optimization</li>
-                            <li>Security hardening</li>
-                        </ul>
-                    </div>
-
-                    <div class="space-y-4 bg-gray-800 rounded-xl p-6 ring-1 ring-gray-700 hover:shadow-lg transition bg-opacity-60">
-                        <h3 class="text-xl font-semibold text-blue-400">WordPress</h3>
-                        <ul class="space-y-2 text-sm text-gray-200">
-                            <li>WordPress installation &amp; setup</li>
-                            <li>Plugin &amp; theme configuration</li>
-                            <li>Custom theme development</li>
-                            <li>Content migration &amp; import</li>
-                            <li>Site Backups</li>
-                            <li>Maintenance &amp; updates</li>
-                        </ul>
-                    </div>
-
-                    <div class="space-y-4 bg-gray-800 rounded-xl p-6 ring-1 ring-gray-700 hover:shadow-lg transition bg-opacity-60">
-                        <h3 class="text-xl font-semibold text-blue-400">Growth &amp; Data</h3>
-                        <ul class="space-y-2 text-sm text-gray-200">
-                            <li>Analytics &amp; event tracking (GA4, goals)</li>
-                            <li>SEO fundamentals (meta, sitemap, robots)</li>
-                            <li>Email capture &amp; newsletter integration</li>
-                            <li>Local business listing &amp; Google Business Profile</li>
-                            <li>Social Media Management</li>
-                        </ul>
-                    </div>
-
-                    <div class="space-y-4 bg-gray-800 rounded-xl p-6 ring-1 ring-gray-700 hover:shadow-lg transition bg-opacity-60">
-                        <h3 class="text-xl font-semibold text-blue-400">Integrations</h3>
-                        <ul class="space-y-2 text-sm text-gray-200">
-                            <li>API integrations (CRM, payments, third-party)</li>
-                            <li>Social media widgets &amp; sharing</li>
-                            <li>Simple e-commerce setup</li>
-                            <li>Reporting dashboards</li>
-                            <li>AI Integrations</li>
-                        </ul>
-                    </div>
-
-                    <div class="space-y-4 bg-gray-800 rounded-xl p-6 ring-1 ring-gray-700 hover:shadow-lg transition bg-opacity-60">
-                        <h3 class="text-xl font-semibold text-blue-400">Design &amp; Branding</h3>
-                        <ul class="space-y-2 text-sm text-gray-200">
-                            <li>Print &amp; Digital conversions</li>
-                            <li>Custom logo design</li>
-                            <li>Branding guidelines &amp; assets</li>
-                            <li>Business Cards, Menus, Brochures, Calendar</li>
-                            <li>Digital media (social graphics, banners)</li>
-                        </ul>
-                    </div>
-
-                    <div class="space-y-4 bg-gray-800 rounded-xl p-6 ring-1 ring-gray-700 hover:shadow-lg transition bg-opacity-60">
-                        <h3 class="text-xl font-semibold text-blue-400">Print Production</h3>
-                        <ul class="space-y-2 text-sm text-gray-200">
-                            <li>Prepress file prep (bleeds, crops)</li>
-                            <li>Color correction &amp; proofing</li>
-                            <li>Print-ready PDF exports</li>
-                            <li>Paper stock &amp; finish recommendations</li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section id="clients" class="min-h-screen flex items-center justify-center bg-gradient-to-b to-gray-900 from-gray-800 shadow-lg px-4 pb-10 pt-16" data-section>
-            <div class="max-w-3xl opacity-0 transform translate-y-8 transition-all duration-700">
-                <div class="reveal text-center mb-8">
-                    <h2 class="text-4xl font-semibold text-white inline-block relative">
-                        Clients
-                        <span class="block w-20 h-1 bg-blue-400 rounded mt-2 mx-auto"></span>
-                    </h2>
-                    <p class="text-lg leading-relaxed max-w-2xl mx-auto text-gray-300 mt-4">
-                        Current and Previous Clients and Projects
-                    </p>
-                </div>
-
-                <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
-                    <li class="w-full group bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition">
-                        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition flex items-center justify-between">
-                            <a href="https://ucirvinesports.com/" target="_blank" rel="noopener">
-                                UC Irvine Athletics
-                            </a>
-                            <span class="ml-auto inline-block bg-purple-100 text-purple-800 text-xs font-semibold uppercase rounded px-2 py-0.5 opacity-60">Print</span>
-                        </h3>
-                        <h4 class="mt-1 text-xs uppercase text-gray-500">University of California, Irvine</h4>
-                        <p class="mt-2 text-sm text-gray-700">Banners, brochures and other collateral for sports events.</p>
-                    </li>
-                    <li class="w-full group bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition">
-                        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition flex items-center justify-between">
-                            <a href="https://www.fallbrooklions.com" target="_blank" rel="noopener">
-                                Fallbrook Ranch Lions Club
-                            </a>
-                            <span class="ml-auto inline-block bg-blue-100 text-blue-800 text-xs font-semibold uppercase rounded px-2 py-0.5 opacity-60">Web</span>
-                        </h3>
-                        <h4 class="mt-1 text-xs uppercase text-gray-500">Local Volunteer Organization</h4>
-                        <p class="mt-2 text-sm text-gray-700">Pro bono website design, development, and hosting.</p>
-                    </li>
-                    <li class="w-full group bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition">
-                        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition flex items-center justify-between">
-                            <a href="https://est.us.com" target="_blank" rel="noopener">
-                                Employee Savings Tickets
-                            </a>
-                            <span class="ml-auto inline-block bg-blue-100 text-blue-800 text-xs font-semibold uppercase rounded px-2 py-0.5 opacity-60">Web</span>
-                        </h3>
-                        <h4 class="mt-1 text-xs uppercase text-gray-500">Online Ticketing Vendor</h4>
-                        <p class="mt-2 text-sm text-gray-700">
-                            Custom dashboard, shopping cart feature additions, and automated API integration.
-                        </p>
-                    </li>
-                    <li class="w-full group bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition">
-                        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition flex items-center justify-between">
-                            <a href="https://www.thevillagenews.com" target="_blank" rel="noopener">
-                                Fallbrook Village News
-                            </a>
-                            <span class="ml-auto inline-block bg-green-100 text-green-800 text-xs font-semibold uppercase rounded px-2 py-0.5 opacity-60">Web &amp; Print</span>
-                        </h3>
-                        <h4 class="mt-1 text-xs uppercase text-gray-500">Local Newspaper</h4>
-                        <p class="mt-2 text-sm text-gray-700">
-                            Custom CRM, WordPress modifications, hosting management, and website consulting. Print advertising.
-                        </p>
-                    </li>
-                    <li class="w-full group bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition">
-                        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition flex items-center justify-between">
-                            <a href="https://www.transitionalbridges.org/" target="_blank" rel="noopener">
-                                Transitional Bridges
-                            </a>
-                            <span class="ml-auto inline-block bg-blue-100 text-blue-800 text-xs font-semibold uppercase rounded px-2 py-0.5 opacity-60">Web</span>
-                        </h3>
-                        <h4 class="mt-1 text-xs uppercase text-gray-500">Non-profit</h4>
-                        <p class="mt-2 text-sm text-gray-700">
-                            WordPress design and feature additions.
-                        </p>
-                    </li>
-                    <li class="w-full group bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition">
-                        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition flex items-center justify-between">
-                            <a href="https://www.codeboxinc.com" target="_blank" rel="noopener">
-                                Codebox Inc
-                            </a>
-                            <span class="ml-auto inline-block bg-blue-100 text-blue-800 text-xs font-semibold uppercase rounded px-2 py-0.5 opacity-60">Web</span>
-                        </h3>
-                        <h4 class="mt-1 text-xs uppercase text-gray-500">Custom Lockboxes</h4>
-                        <p class="mt-2 text-sm text-gray-700">
-                            Custom web software and third-party integrations.
-                        </p>
-                    </li>
-                    <li class="w-full group bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition">
-                        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition flex items-center justify-between">
-                            <a href="https://www.clarocity.com" target="_blank" rel="noopener">
-                                Clarocity Inc.
-                            </a>
-                            <span class="ml-auto inline-block bg-blue-100 text-blue-800 text-xs font-semibold uppercase rounded px-2 py-0.5 opacity-60">Web</span>
-                        </h3>
-                        <h4 class="mt-1 text-xs uppercase text-gray-500">Real Estate Appraisal Software</h4>
-                        <p class="mt-2 text-sm text-gray-700">
-                            Custom built in-the-field appraisal software for desktop/mobile.
-                        </p>
-                    </li>
-                    <li class="w-full group bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition">
-                        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition flex items-center justify-between">
-                            <a href="https://www.purearth2o.com/" target="_blank" rel="noopener">
-                                Purearth2o
-                            </a>
-                            <span class="ml-auto inline-block bg-green-100 text-green-800 text-xs font-semibold uppercase rounded px-2 py-0.5 opacity-60">Web &amp; Print</span>
-                        </h3>
-                        <h4 class="mt-1 text-xs uppercase text-gray-500">Water Treatment</h4>
-                        <p class="mt-2 text-sm text-gray-700">
-                            Brochure and printed catalogs. Graphic design for website.
-                        </p>
-                    </li>
-                    <li class="w-full group bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition">
-                        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition flex items-center justify-between">
-                            <a href="https://www.acinvestigation.com/" target="_blank" rel="noopener">
-                                AC Investigations
-                            </a>
-                            <span class="ml-auto inline-block bg-blue-100 text-blue-800 text-xs font-semibold uppercase rounded px-2 py-0.5 opacity-60">Web</span>
-                        </h3>
-                        <h4 class="mt-1 text-xs uppercase text-gray-500">
-                            Private Investigation Services
-                        </h4>
-                        <p class="mt-2 text-sm text-gray-700">
-                            Google Analytics, SEO, and Wordpress additions.
-                        </p>
-                    </li>
-                    <li class="w-full group bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition">
-                        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition flex items-center justify-between">
-                            <a href="https://www.sunheromagazine.com/" target="_blank" rel="noopener">
-                                Sun Hero Magazine
-                            </a>
-                            <span class="ml-auto inline-block bg-purple-100 text-purple-800 text-xs font-semibold uppercase rounded px-2 py-0.5 opacity-60">Print</span>
-                        </h3>
-                        <h4 class="mt-1 text-xs uppercase text-gray-500">Printed Magazine</h4>
-                        <p class="mt-2 text-sm text-gray-700">Magazine layout and design.</p>
-                    </li>
-                    <li class="w-full group bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition">
-                        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition flex items-center justify-between">
-                            <a href="https://www.myvalleynews.com/" target="_blank" rel="noopener">
-                                Temecula Valley News
-                            </a>
-                            <span class="ml-auto inline-block bg-green-100 text-green-800 text-xs font-semibold uppercase rounded px-2 py-0.5 opacity-60">Web &amp; Print</span>
-                        </h3>
-                        <h4 class="mt-1 text-xs uppercase text-gray-500">Local Newspaper</h4>
-                        <p class="mt-2 text-sm text-gray-700">
-                            Wordpress management, consulting, and IT work.Print advertising.
-                        </p>
-                    </li>
-                    <li class="w-full group bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition">
-                        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition flex items-center justify-between">
-                            <a href="https://www.birthlineofsandiego.org/" target="_blank" rel="noopener">
-                                Birthline of San Diego
-                            </a>
-                            <span class="ml-auto inline-block bg-blue-100 text-blue-800 text-xs font-semibold uppercase rounded px-2 py-0.5 opacity-60">Web</span>
-                        </h3>
-                        <h4 class="mt-1 text-xs uppercase text-gray-500">Non-profit</h4>
-                        <p class="mt-2 text-sm text-gray-700">
-                            WordPress design and feature additions.
-                        </p>
-                    </li>
-                    <li class="w-full group bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition">
-                        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition flex items-center justify-between">
-                            <a href="https://www.coverfilters.com/" target="_blank" rel="noopener">
-                                Cover Filters
-                            </a>
-                            <span class="ml-auto inline-block bg-green-100 text-green-800 text-xs font-semibold uppercase rounded px-2 py-0.5 opacity-60">Web &amp; Print</span>
-                        </h3>
-                        <h4 class="mt-1 text-xs uppercase text-gray-500">Water Treatment</h4>
-                        <p class="mt-2 text-sm text-gray-700">
-                            Website Design and layout. Brochures and business cards.
-                        </p>
-                    </li>
-                </ul>
-
-            </div>
-        </section>
-
-        <section id="contact" class="min-h-screen flex items-center justify-center bg-slate-900 text-slate-100" data-section>
-            <div class="text-center px-6 py-16 space-y-8 opacity-0 transform translate-y-8 transition-all duration-700">
-                <div class="reveal text-center mb-4">
-                    <h2 class="text-4xl font-semibold inline-block relative">
-                        Get in Touch
-                        <span class="block w-20 h-1 bg-gray-400 rounded mt-2 mx-auto"></span>
-                    </h2>
-                    <p class="text-md leading-relaxed max-w-2xl mx-auto text-gray-600 mt-4">
-                        In-person services throughout Southern California,<br> with remote support for clients nationwide.
-                    </p>
-                </div>
-
-                <a href="mailto:info@dellaport.dev" class="inline-flex bg-gray-100 items-center gap-3 px-8 py-4 rounded-full font-semibold
-                            bg-gradient-to-r from-fuchsia-500 via-violet-600 to-indigo-600
-                            hover:brightness-110 hover:bg-white shadow-xl transition
-                            focus:ring-4 focus:outline-none ring-violet-400/50">
-                    <i class="fas fa-envelope"></i> info@dellaport.dev
-                </a>
-
-                <p class="text-center text-gray-400 pt-5">
-                    San Diego &middot; Los Angeles &middot; Orange County &middot; Inland Empire
+        <!-- HERO -->
+        <section id="home"
+            class="relative min-h-screen flex flex-col items-center justify-center px-6 pt-20 bg-gray-900 overflow-hidden"
+            data-section aria-labelledby="hero-heading">
+        
+            <div class="hero-gradient" aria-hidden="true"></div>
+            <div class="grid-overlay" aria-hidden="true"></div>
+        
+            <div class="opacity-0 transform translate-y-8 transition-all duration-700 relative z-10 text-center max-w-3xl mx-auto">
+                <h1 id="logo" class="relative inline-block whitespace-nowrap font-black leading-none mb-4" style="font-size:clamp(2.5rem,8vw,5.5rem);">
+                    <span id="arrow-left" class="absolute left-1/2 top-0 text-yellow-400 px-2 transition-transform duration-1000 ease-out" aria-hidden="true">&lt;</span>
+                    <span id="logo-text" class="inline-block opacity-0 mx-2 transition-opacity duration-1000 delay-700 ease-out">
+                        de<span class="italic text-yellow-400">ll</span>aport.dev
+                    </span>
+                    <span id="arrow-right" class="absolute left-1/2 top-0 text-yellow-400 px-2 transition-transform duration-1000 ease-out" aria-hidden="true">&gt;</span>
+                </h1>
+                <p class="text-xs tracking-widest uppercase text-gray-500 mb-8 font-mono">
+                    Design &amp; Development
                 </p>
+                <p class="text-base text-gray-400 mb-10 leading-relaxed max-w-xl mx-auto">
+                    Web development, custom software, print and digital media design solutions for small to medium businesses.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#services" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-lg transition-colors">
+                        View Services
+                    </a>
+                    <a href="mailto:info@dellaport.dev" class="px-6 py-3 border border-gray-700 hover:border-indigo-400 text-gray-400 hover:text-white text-sm rounded-lg transition-all font-mono">
+                        <i class="fas fa-envelope mr-2" aria-hidden="true"></i>info@dellaport.dev
+                    </a>
+                </div>
+            </div>
+            <div class="scroll-hint" aria-hidden="true"><span></span></div>
+        </section>
 
+        <!-- SERVICES -->
+        <section id="services" class="py-28 px-6 bg-gray-800 border-t border-b border-gray-700 relative overflow-hidden" data-section aria-labelledby="services-heading">
+            <div class="max-w-5xl mx-auto">
+                <div class="opacity-0 transform translate-y-8 transition-all duration-700">
+                    <p class="text-xs tracking-widest uppercase text-indigo-400 mb-3 font-mono">
+                        01 / Services
+                    </p>
+                    <h2 id="services-heading" class="text-3xl sm:text-4xl font-black tracking-tight mb-4">
+                        What I do
+                    </h2>
+                    <p class="text-gray-400 max-w-xl mb-12 leading-relaxed">
+                        Practical web services for small businesses—what you need to launch, grow, and maintain a modern site, or connect/modernize an older site.
+                    </p>
+                    <div class="grid gap-px sm:grid-cols-2 lg:grid-cols-3 bg-gray-700 rounded-xl overflow-hidden" role="list">
+
+                        <article class="bg-gray-800 hover:bg-gray-700 p-6 flex flex-col gap-3 transition-colors" role="listitem">
+                            <div class="w-8 h-8 flex items-center justify-center rounded-lg bg-indigo-900 border border-indigo-800 text-indigo-400 text-sm" aria-hidden="true">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3 class="font-bold text-white text-sm">Custom Development</h3>
+                            <ul class="text-xs text-gray-400 space-y-1 leading-relaxed">
+                                <li>Tailored web applications</li>
+                                <li>Custom &amp; purpose-built interfaces</li>
+                                <li>Database design &amp; management</li>
+                                <li>Database migration &amp; conversions</li>
+                                <li>Responsive &amp; mobile tuning</li>
+                                <li>Performance optimization</li>
+                                <li>Security hardening</li>
+                            </ul>
+                        </article>
+
+                        <article class="bg-gray-800 hover:bg-gray-700 p-6 flex flex-col gap-3 transition-colors" role="listitem">
+                            <div class="w-8 h-8 flex items-center justify-center rounded-lg bg-indigo-900 border border-indigo-800 text-indigo-400 text-sm" aria-hidden="true">
+                                <i class="fab fa-wordpress"></i>
+                            </div>
+                            <h3 class="font-bold text-white text-sm">WordPress</h3>
+                            <ul class="text-xs text-gray-400 space-y-1 leading-relaxed">
+                                <li>Installation &amp; setup</li>
+                                <li>Plugin &amp; theme configuration</li>
+                                <li>Custom theme development</li>
+                                <li>Content migration &amp; import</li>
+                                <li>Site backups</li>
+                                <li>Maintenance &amp; updates</li>
+                            </ul>
+                        </article>
+
+                        <article class="bg-gray-800 hover:bg-gray-700 p-6 flex flex-col gap-3 transition-colors" role="listitem">
+                            <div class="w-8 h-8 flex items-center justify-center rounded-lg bg-indigo-900 border border-indigo-800 text-indigo-400 text-sm" aria-hidden="true">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3 class="font-bold text-white text-sm">Growth &amp; Data</h3>
+                            <ul class="text-xs text-gray-400 space-y-1 leading-relaxed">
+                                <li>Analytics &amp; event tracking (GA4)</li>
+                                <li>SEO fundamentals</li>
+                                <li>Email capture &amp; newsletter integration</li>
+                                <li>Google Business Profile</li>
+                                <li>Social media management</li>
+                            </ul>
+                        </article>
+
+                        <article class="bg-gray-800 hover:bg-gray-700 p-6 flex flex-col gap-3 transition-colors" role="listitem">
+                            <div class="w-8 h-8 flex items-center justify-center rounded-lg bg-indigo-900 border border-indigo-800 text-indigo-400 text-sm" aria-hidden="true">
+                                <i class="fas fa-plug"></i>
+                            </div>
+                            <h3 class="font-bold text-white text-sm">Integrations</h3>
+                            <ul class="text-xs text-gray-400 space-y-1 leading-relaxed">
+                                <li>API integrations (CRM, payments)</li>
+                                <li>Social media widgets &amp; sharing</li>
+                                <li>Simple e-commerce setup</li>
+                                <li>Reporting dashboards</li>
+                                <li>AI integrations</li>
+                            </ul>
+                        </article>
+
+                        <article class="bg-gray-800 hover:bg-gray-700 p-6 flex flex-col gap-3 transition-colors" role="listitem">
+                            <div class="w-8 h-8 flex items-center justify-center rounded-lg bg-indigo-900 border border-indigo-800 text-indigo-400 text-sm" aria-hidden="true">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h3 class="font-bold text-white text-sm">Design &amp; Branding</h3>
+                            <ul class="text-xs text-gray-400 space-y-1 leading-relaxed">
+                                <li>Print &amp; digital conversions</li>
+                                <li>Custom logo design</li>
+                                <li>Branding guidelines &amp; assets</li>
+                                <li>Business cards, menus, brochures</li>
+                                <li>Digital media &amp; social graphics</li>
+                            </ul>
+                        </article>
+
+                        <article class="bg-gray-800 hover:bg-gray-700 p-6 flex flex-col gap-3 transition-colors" role="listitem">
+                            <div class="w-8 h-8 flex items-center justify-center rounded-lg bg-indigo-900 border border-indigo-800 text-indigo-400 text-sm" aria-hidden="true">
+                                <i class="fas fa-print"></i>
+                            </div>
+                            <h3 class="font-bold text-white text-sm">Print Production</h3>
+                            <ul class="text-xs text-gray-400 space-y-1 leading-relaxed">
+                                <li>Prepress file prep (bleeds, crops)</li>
+                                <li>Color correction &amp; proofing</li>
+                                <li>Print-ready PDF exports</li>
+                                <li>Paper stock &amp; finish recommendations</li>
+                            </ul>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CLIENTS -->
+        <section id="clients" class="py-28 px-6 bg-gray-900 relative overflow-hidden" data-section aria-labelledby="clients-heading">
+            <div class="max-w-5xl mx-auto">
+                <div class="opacity-0 transform translate-y-8 transition-all duration-700">
+                    <p class="text-xs tracking-widest uppercase text-indigo-400 mb-3 font-mono">02 / Clients</p>
+                    <h2 id="clients-heading" class="text-3xl sm:text-4xl font-black tracking-tight mb-4">Who I've worked with</h2>
+                    <p class="text-gray-400 max-w-xl mb-12 leading-relaxed">A mix of non-profits, local businesses, and service companies across Southern California.</p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3" role="list">
+
+                        <li class="group border border-gray-800 hover:border-indigo-500 rounded-lg transition-colors" role="listitem">
+                            <a href="https://www.fallbrooklions.com" target="_blank" rel="noopener noreferrer" class="flex flex-col gap-2 p-5 h-full rounded-lg" aria-label="Fallbrook Ranch Lions Club, opens in new tab">
+                                <h3 class="font-bold text-md text-white group-hover:text-indigo-300 transition-colors">Fallbrook Ranch Lions Club</h3>
+                                <span class="text-xs text-indigo-400 uppercase tracking-wider font-mono">Local Volunteer Organization</span>
+                                <p class="text-xs text-gray-500 pt-2">Pro bono website design, development, and hosting, and member of.</p>
+                            </a>
+                        </li>
+
+                        <li class="group border border-gray-800 hover:border-indigo-500 rounded-lg transition-colors" role="listitem">
+                            <a href="https://ucirvinesports.com/" target="_blank" rel="noopener noreferrer" class="flex flex-col gap-2 p-5 h-full rounded-lg" aria-label="UC Irvine Athletics, opens in new tab">
+                                <h3 class="font-bold text-md text-white group-hover:text-indigo-300 transition-colors">
+                                    UC Irvine Athletics
+                                </h3>
+                                <span class="text-xs text-indigo-400 uppercase tracking-wider font-mono">
+                                    University of California, Irvine
+                                </span>
+                                <p class="text-xs text-gray-500 pt-2">
+                                    Banners, brochures and other collateral for sports events.
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="group border border-gray-800 hover:border-indigo-500 rounded-lg transition-colors" role="listitem">
+                            <a href="https://est.us.com" target="_blank" rel="noopener noreferrer" class="flex flex-col gap-2 p-5 h-full rounded-lg" aria-label="OBC Ticketing, opens in new tab">
+                                <h3 class="font-bold text-md text-white group-hover:text-indigo-300 transition-colors">
+                                    OBC Ticketing
+                                </h3>
+                                <span class="text-xs text-indigo-400 uppercase tracking-wider font-mono">
+                                    Online Ticketing Vendor
+                                </span>
+                                <p class="text-xs text-gray-500 pt-2">
+                                    Custom dashboard/CRM and automated API integrations.
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="group border border-gray-800 hover:border-indigo-500 rounded-lg transition-colors" role="listitem">
+                            <a href="https://www.thevillagenews.com" target="_blank" rel="noopener noreferrer" class="flex flex-col gap-2 p-5 h-full rounded-lg" aria-label="The Fallbrook Village News, opens in new tab">
+                                <h3 class="font-bold text-md text-white group-hover:text-indigo-300 transition-colors">
+                                    The Fallbrook Village News
+                                </h3>
+                                <span class="text-xs text-indigo-400 uppercase tracking-wider font-mono">
+                                    Local Newspaper
+                                </span>
+                                <p class="text-xs text-gray-500 pt-2">
+                                    Custom CRM, WordPress modifications, hosting management, and website consulting. Print advertising.
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="group border border-gray-800 hover:border-indigo-500 rounded-lg transition-colors" role="listitem">
+                            <a href="https://www.transitionalbridges.org/" target="_blank" rel="noopener noreferrer" class="flex flex-col gap-2 p-5 h-full rounded-lg" aria-label="Transitional Bridges, opens in new tab">
+                                <h3 class="font-bold text-md text-white group-hover:text-indigo-300 transition-colors">
+                                    Transitional Bridges
+                                </h3>
+                                <span class="text-xs text-indigo-400 uppercase tracking-wider font-mono">
+                                    Non-profit
+                                </span>
+                                <p class="text-xs text-gray-500 pt-2">
+                                    WordPress design and feature additions
+
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="group border border-gray-800 hover:border-indigo-500 rounded-lg transition-colors" role="listitem">
+                            <a href="https://www.codeboxinc.com" target="_blank" rel="noopener noreferrer" class="flex flex-col gap-2 p-5 h-full rounded-lg" aria-label="Codebox Inc, opens in new tab">
+                                <h3 class="font-bold text-md text-white group-hover:text-indigo-300 transition-colors">
+                                    Codebox Inc
+                                </h3>
+                                <span class="text-xs text-indigo-400 uppercase tracking-wider font-mono">
+                                    Custom Lockboxes
+                                </span>
+                                <p class="text-xs text-gray-500 pt-2">
+                                    Custom web software and automated API integrations
+
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="group border border-gray-800 hover:border-indigo-500 rounded-lg transition-colors" role="listitem">
+                            <a href="https://www.birthlineofsandiego.org/" target="_blank" rel="noopener noreferrer" class="flex flex-col gap-2 p-5 h-full rounded-lg" aria-label="Birthline of San Diego, opens in new tab">
+                                <h3 class="font-bold text-md text-white group-hover:text-indigo-300 transition-colors">
+                                    Birthline of San Diego
+                                </h3>
+                                <span class="text-xs text-indigo-400 uppercase tracking-wider font-mono">
+                                    Non-profit Healthcare
+                                </span>
+                                <p class="text-xs text-gray-500 pt-2">
+                                    WordPress design and feature additions
+
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="group border border-gray-800 hover:border-indigo-500 rounded-lg transition-colors" role="listitem">
+                            <a href="https://www.purearth2o.com/" target="_blank" rel="noopener noreferrer" class="flex flex-col gap-2 p-5 h-full rounded-lg" aria-label="Purearth2o, opens in new tab">
+                                <h3 class="font-bold text-md text-white group-hover:text-indigo-300 transition-colors">
+                                    Purearth2o
+                                </h3>
+                                <span class="text-xs text-indigo-400 uppercase tracking-wider font-mono">
+                                    Water Treatment Services
+
+                                </span>
+                                <p class="text-xs text-gray-500 pt-2">
+                                    Brochure and printed catalogs
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="group border border-gray-800 hover:border-indigo-500 rounded-lg transition-colors" role="listitem">
+                            <a href="https://www.acinvestigation.com/" target="_blank" rel="noopener noreferrer" class="flex flex-col gap-2 p-5 h-full rounded-lg" aria-label="AC Investigations, opens in new tab">
+                                <h3 class="font-bold text-md text-white group-hover:text-indigo-300 transition-colors">
+                                    AC Investigations
+                                </h3>
+                                <span class="text-xs text-indigo-400 uppercase tracking-wider font-mono">
+                                    Private Investigation Services
+                                </span>
+                                <p class="text-xs text-gray-500 pt-2">
+                                    Google Analytics, SEO, and WordPress additions
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="group border border-gray-800 hover:border-indigo-500 rounded-lg transition-colors" role="listitem">
+                            <a href="https://www.sunheromagazine.com/" target="_blank" rel="noopener noreferrer" class="flex flex-col gap-2 p-5 h-full rounded-lg" aria-label="Sun Hero Magazine, opens in new tab">
+                                <h3 class="font-bold text-md text-white group-hover:text-indigo-300 transition-colors">
+                                    Sun Hero Magazine
+                                </h3>
+                                <span class="text-xs text-indigo-400 uppercase tracking-wider font-mono">
+                                    Printed Magazine
+                                </span>
+                                <p class="text-xs text-gray-500 pt-2">
+                                    Magazine layout and design
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="group border border-gray-800 hover:border-indigo-500 rounded-lg transition-colors" role="listitem">
+                            <a href="https://www.sunheromagazine.com/" target="_blank" rel="noopener noreferrer" class="flex flex-col gap-2 p-5 h-full rounded-lg" aria-label="Temecula Valley News, opens in new tab">
+                                <h3 class="font-bold text-md text-white group-hover:text-indigo-300 transition-colors">
+                                    Temecula Valley News
+                                </h3>
+                                <span class="text-xs text-indigo-400 uppercase tracking-wider font-mono">
+                                    Local Newspaper
+                                </span>
+                                <p class="text-xs text-gray-500 pt-2">
+                                    Wordpress management, consulting, and IT work.Print advertising.
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="py-28 px-6 bg-gray-800 border-t border-gray-700 relative overflow-hidden" data-section aria-labelledby="contact-heading">
+            <div class="max-w-5xl mx-auto">
+                <div class="opacity-0 transform translate-y-8 transition-all duration-700 max-w-2xl">
+                    <p class="text-xs tracking-widest uppercase text-indigo-400 mb-3 font-mono">
+                        03 / Contact
+                    </p>
+                    <h2 id="contact-heading" class="text-3xl sm:text-4xl font-black tracking-tight mb-4">
+                        Let's build something.
+                    </h2>
+                    <p class="text-gray-400 mb-10 leading-relaxed">
+                        In-person services throughout Southern California, with remote support for clients nationwide.
+                    </p>
+                    <a href="mailto:info@dellaport.dev" class="inline-flex items-center gap-3 px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-lg transition-colors" aria-label="Send email to info@dellaport.dev">
+                        <i class="fas fa-envelope" aria-hidden="true"></i> info@dellaport.dev
+                    </a>
+                </div>
             </div>
         </section>
 
     </div>
-    <script>
-        const sections = document.querySelectorAll('[data-section] > div');
-        const options = { threshold: 0.1 };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.remove('opacity-0', 'translate-y-8');
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, options);
-        sections.forEach(sec => observer.observe(sec));
 
-        window.addEventListener('load', () => {
-                const logo = document.getElementById('logo');
-                const left = document.getElementById('arrow-left');
-                const right = document.getElementById('arrow-right');
-                const text = document.getElementById('logo-text');
-                const pad = 20;
+    <footer class="border-t border-gray-800 py-8 px-6" role="contentinfo">
+        <div
+            class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-600">
+            <span style="font-family:'DM Mono',monospace;">&lt;dellaport.dev /&gt;</span>
+            <span>&copy; <span id="year"></span> dellaport.dev. All rights reserved.</span>
+        </div>
+    </footer>
 
-                requestAnimationFrame(() => {
-                    const w = text.offsetWidth;
-                    const slideDist = w / 2 + pad;
-                    logo.style.setProperty('--slide-distance', `${slideDist}px`);
-                    logo.classList.add('loaded');
-                    text.classList.remove('opacity-0');
-                });
-            });
-
-
-    </script>
+    <script>document.documentElement.classList.remove('no-js');</script>
+    <script src="./scripts.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 
 </html>
