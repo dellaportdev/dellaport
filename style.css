@@ -35,6 +35,10 @@ html {
     }
 }
 
+.nav-link {
+    position: relative;
+}
+
 .nav-link::after {
     content: "";
     position: absolute;
