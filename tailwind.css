@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: "DM Sans", sans-serif;
+    --font-mono: "DM Mono", monospace;
+}
+
+@layer components {
+    .eyebrow {
+        @apply text-xs tracking-widest uppercase text-indigo-400 mb-3 font-mono;
+    }
+
+    .section-title {
+        @apply text-3xl sm:text-4xl font-black tracking-tight mb-4;
+    }
+
+    .btn-primary {
+        @apply px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-lg transition-colors;
+    }
+
+    .service-card {
+        @apply bg-gray-800 hover:bg-gray-700 p-6 flex flex-col gap-3 transition-colors;
+    }
+
+    .service-icon {
+        @apply w-8 h-8 flex items-center justify-center rounded-lg bg-indigo-900 border border-indigo-800 text-indigo-400 text-sm;
+    }
+
+    .service-title {
+        @apply font-bold text-white text-sm;
+    }
+
+    .service-list {
+        @apply text-xs text-gray-400 space-y-1 leading-relaxed;
+    }
+
+    .client-card {
+        @apply border border-gray-800 rounded-lg transition-colors;
+    }
+
+    .client-card:hover {
+        @apply border-indigo-500;
+    }
+
+    .client-link {
+        @apply flex flex-col gap-2 p-5 h-full rounded-lg;
+    }
+
+    .client-title {
+        @apply font-bold text-base text-white transition-colors;
+    }
+
+    .client-card:hover .client-title {
+        @apply text-indigo-300;
+    }
+
+    .client-tag {
+        @apply text-xs text-indigo-400 uppercase tracking-wider font-mono;
+    }
+
+    .client-desc {
+        @apply text-xs text-gray-500 pt-2;
+    }
+}
